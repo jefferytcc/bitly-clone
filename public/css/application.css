@@ -1,0 +1,55 @@
+.jumbotron {
+	
+	font-family: "brandon-grotesque","Helvetica Neue",Helvetica,Arial,sans-serif;
+	color: white;
+	height: 455px;
+	letter-spacing: 4px;
+	width: auto ;
+    margin: auto;
+	background-image:
+	linear-gradient(
+		rgba(0, 0, 0, 0.75),
+		rgba(0, 0, 0, 0.1)
+		),
+	url('/img/bj.jpg');
+	background-size: cover;
+}
+
+
+p {
+
+color: white;
+font-family: "brandon-grotesque","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+.navbar {
+
+    margin-bottom: 0;
+    background-color: grey;
+    z-index: 9999;
+    border: 0;
+    font-size: 12px !important;
+    line-height: 1.42857143 !important;
+    letter-spacing: 4px;
+    border-radius: 0;
+}
+
+.navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+}

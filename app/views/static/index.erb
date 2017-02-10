@@ -1,2 +1,54 @@
-<h1>Hello World</h1>
-<p>See Me in views/static/index.html.erb</p>
+<div id="nav">
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+      </button>
+      <a class="navbar-brand" href="/">URLShor.ty</a>
+    </div>
+  </div>
+</nav>
+
+<div class="table">
+  <div class="jumbotron text-center">
+    <h1>URLSHOR.TY</h1>
+    <p>URL DESTROYER!</p>
+    <form class="form-inline" action="/urls" method="post" id=myForm>
+      <div class="input-group">
+  	   <input id="form-bootstrap-overrides" class="form-control" size="60" type="text" placeholder="Enter your URL here" name="longUrl">
+        <div class="input-group-btn">
+  	       <button class="btn btn-danger" type="submit" value="Submit">SUBMIT</button>
+        </div>
+      </div>
+      <div class="error">
+      <p><%= @error %></p>
+      </div>
+      <p>THE LINK KNOWS ALL. SO CAN YOU.</p>
+    </form>
+    </div>
+
+
+
+  <div class="container text-center"<p>Here are your recently shortened URLs!</p>
+  <table id="table-to-refresh">
+  <thead>
+
+      <th> Long Url </th>
+      <th> Short Url </th>
+      <th> Visit count </th>
+   </thead>
+   <tbody>
+          <% @urls.each do |url|%>
+          <tr>
+              <td><%= url.longUrl %></td>
+              <td><a href="http://localhost:9393/<%= url.shortUrl%>">http://Urlshor.ty/<%= url.shortUrl %></a></td>
+              <td><%= url.clickCount%></td>
+          </tr>
+          <% end %>
+  </tbody>
+  </table>
+</div>
+</div>
+
+
+
